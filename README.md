@@ -1,52 +1,68 @@
 Markdown
-Este projeto foi desenvolvido para a resolução de um teste técnico focado em lógica de programação e algoritmos. O objetivo é demonstrar clareza de código, tratamento de casos extremos e organização.
+# Teste de Lógica — C# 🚀
+
+Olá! Esse repositório guarda as minhas resoluções para o teste técnico de lógica de programação. Fiz todas as questões usando **C#** (Console Applications) rodando no **.NET**.
+
+Tentei focar em deixar o código limpo, tratar casos estranhos (como arrays vazios ou sem o resultado esperado) e pensar um pouco na performance de cada solução.
 
 ---
 
-## Tecnologias
-
-* C# (.NET)
-* Batch Script (.bat)
-
----
-
-## Estrutura do Projeto
-
-`/questao1` a `/questao6` Códigos isolados para cada desafio de lógica.  
-`/bonus` Código separado para o desafio extra.  
-`menu.bat` Arquivo executável para rodar o menu interativo no terminal.  
+## 📌 Sumário
+1. [Como testar meu código](#1-como-testar-meu-código)
+2. [Como organizei as pastas](#2-como-organizei-as-pastas)
+3. [Resumo das Questões](#3-resumo-das-questões)
+4. [Tecnologias](#4-tecnologias)
 
 ---
 
-## Exercícios Resolvidos
+## 1. Como testar meu código
 
-* **Questão 1 — Soma de pares:** Soma todos os números pares de um array[cite: 1].
-* **Questão 2 — Segundo maior número:** Encontra o segundo maior número distinto, tratando arrays com elementos repetidos[cite: 1].
-* **Questão 3 — Parênteses válidos:** Verifica se parênteses, chaves e colchetes estão balanceados corretamente[cite: 1].
-* **Questão 4 — Dois números (Two Sum):** Encontra a posição de dois números em um array cuja soma resulta no valor alvo (`target`)[cite: 1].
-* **Questão 5 — Contagem de caracteres:** Conta quantas vezes cada caractere aparece em uma string[cite: 1].
-* **Questão 6 — Número desaparecido:** Descobre qual número está faltando em uma sequência numérica de 0 a `n`[cite: 1].
-* **Questão Bônus — Palíndromo:** Verifica se uma string pode ser lida da mesma forma de trás pra frente, ignorando espaços e maiúsculas/minúsculas[cite: 1].
+Para facilitar a vida de quem for corrigir, eu criei um script simples que funciona como um menu interativo. Assim você não precisa ficar entrando de pasta em pasta no terminal! 😄
 
----
-
-## Como Começar
-
-### Clone o repositório
-
+**O jeito mais fácil:**
+É só dar dois cliques no arquivo `menu.bat` que está na pasta principal, ou rodar ele direto no terminal:
 ```bash
-git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
-cd nome-do-repositorio
-Execute o menu interativo
-Para não precisar rodar pasta por pasta manualmente, criei um script de atalho. No terminal, basta rodar:
-
-Bash
 .\menu.bat
-(Ou apenas dê dois cliques no arquivo menu.bat pelo Explorador de Arquivos do Windows).
+Isso vai abrir um menu perguntando qual questão você quer rodar e ele já faz o trabalho de executar tudo.
 
-Execução manual
-Se preferir rodar os projetos de forma independente através do CLI do .NET:
+O jeito manual (se preferir):
+Caso queira rodar os projetos direto pelo CLI do .NET, é só entrar na pasta da questão e dar um run:
 
 Bash
 cd questao1
 dotnet run
+2. Como organizei as pastas
+Deixei cada questão separada no seu próprio projeto para não misturar as coisas. A estrutura ficou assim:
+
+Plaintext
+📁 Teste-logica/
+ ├── 📁 questao1/
+ ├── 📁 questao2/
+ ├── 📁 questao3/
+ ├── 📁 questao4/
+ ├── 📁 questao5/
+ ├── 📁 questao6/
+ ├── 📁 bonus/
+ ├── 📄 menu.bat    <-- Script do menuzinho que eu criei
+ └── 📄 README.md
+3. Resumo das Questões
+Aqui vai um resumão da estratégia que usei em cada desafio:
+
+Questão 1 — Soma de pares: Pega um array de números e soma apenas os pares. Bem direto ao ponto.
+
+Questão 2 — Segundo maior número: Acha o segundo maior número distinto de um array. Tomei o cuidado de tratar quando os números são repetidos ou quando não existe um segundo maior.
+
+Questão 3 — Parênteses válidos: Verifica se uma string de parênteses, chaves e colchetes está abrindo e fechando na ordem certa (usei o conceito de Pilha/Stack aqui).
+
+Questão 4 — Dois números (Two Sum): Acha a posição de dois números que somados dão o "target". Tentei otimizar a busca para não precisar usar dois loops um dentro do outro.
+
+Questão 5 — Contagem de caracteres: Conta quantas vezes cada letra aparece numa string.
+
+Questão 6 — Número desaparecido: Descobre qual número está faltando numa sequência de 0 até n.
+
+Questão Bônus — Palíndromo: Verifica se a palavra ou frase pode ser lida de trás pra frente, ignorando os espaços e letras maiúsculas/minúsculas.
+
+4. Tecnologias
+C# / .NET
+
+Batch Script (Apenas o arquivo .bat pra fazer o menu funcionar no Windows)
